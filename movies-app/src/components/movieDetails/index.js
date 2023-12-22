@@ -46,7 +46,7 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         <li>
           <Chip label="Genres" sx={chip} color="primary" />
         </li>
-        {movie.genres.map((g) => (
+        {movie.genres?.map((g) => (
           <li key={g.name}>
             <Chip label={g.name} sx={chip} />
           </li>
@@ -56,7 +56,7 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         <Chip icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} />
         <Chip
           icon={<MonetizationIcon />}
-          label={`${movie.revenue.toLocaleString()}`}
+          label={`${movie.revenue?.toLocaleString()}`}
         />
         <Chip
           icon={<StarRate />}
@@ -84,7 +84,7 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         <li>
           <Chip label="Production Companies" sx={chip} color="primary" />
         </li>
-        {movie.production_companies.map((c) => (
+        {movie.production_companies?.map((c) => (
           <li key={c.name}>
             <Chip label={c.name} sx={chip} />
           </li>
